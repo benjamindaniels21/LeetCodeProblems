@@ -15,3 +15,19 @@ Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
 
 */
+
+//solution:
+
+var containsDuplicate = function (nums) {
+  let newArr = [];
+  for (i = 0; i < nums.length; i++) {
+    if (newArr.includes(nums[i])) {
+      return true;
+    } else {
+      newArr.push(nums[i]);
+      if (newArr.length === nums.length) {
+        return false;
+      }
+    }
+  }
+};

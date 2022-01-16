@@ -21,3 +21,29 @@
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 ///comments: We need to check both ends and work our way toward the center.
+
+//----Solution-----
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function (x) {
+  //convert to string
+  let numString = x.toString();
+  //string'd number ^^
+  let splitString = numString.split("");
+  console.log(splitString);
+  //split the numString ^^^ into an array
+  let revString = splitString.reverse();
+  console.log(revString);
+  let joinString = revString.join("");
+  console.log(joinString);
+  console.log(x);
+
+  if (joinString == x) {
+    return true;
+  } else {
+    return false;
+  }
+};

@@ -23,3 +23,20 @@
 // 1 <= s.length <= 104
 // s consists of only English letters and spaces ' '.
 // There will be at least one word in s.
+
+// solution:
+
+var lengthOfLastWord = function (s) {
+  let whitespace = " ";
+  let deleted = s.trim();
+  console.log(deleted);
+  let finalSpace = deleted.lastIndexOf(whitespace);
+  console.log(`Final space is at ${finalSpace}`);
+
+  let totalLength = deleted.length;
+  console.log(`total length is ${totalLength}`);
+  let lastWordLength = totalLength - finalSpace - 1;
+  console.log(lastWordLength);
+
+  return lastWordLength;
+};
